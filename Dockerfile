@@ -8,7 +8,6 @@ RUN tar xvf apache-tomcat-9.0.64.tar.gz
 RUN cp -r apache-tomcat-9.0.64/* /opt/tomcat/.
 
 COPY my-app.war /opt/tomcat/webapps/
-COPY my-app.war ./target/my-app.war
 EXPOSE 8080 
 
 ENTRYPOINT ["/opt/tomcat/bin/catalina.sh","run"]
