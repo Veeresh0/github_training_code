@@ -8,6 +8,7 @@ RUN tar xvf apache-tomcat-9.0.85.tar.gz
 RUN cp -r apache-tomcat-9.0.85/* /opt/tomcat/.
 
 COPY my-app.war /opt/tomcat/webapps/
+COPY ./target/my-app.war
 
 EXPOSE 8080 
 
